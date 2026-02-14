@@ -216,3 +216,15 @@ button:active {
   outline: 3px solid rgba(255,45,85,0.18);
   outline-offset: 3px;
 }
+
+/* Mobile adjustments for hotPicBtn */
+@media (max-width: 480px) {
+  #hotPicBtn {
+    left: 12px;
+    bottom: 12px;
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgba(120,10,60,0.32), 0 2px 6px rgba(0,0,0,0.12);
+  }
+}
