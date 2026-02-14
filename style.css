@@ -9,9 +9,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
-  background-size: 400% 400%;
-  animation: bgMove 12s ease infinite;
+
+  background: linear-gradient(-45deg, #ff9bcf, #ff6aa5, #d81b60);
+  background-size: 300% 300%;
+  animation: bgMove 14s ease infinite;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
 }
@@ -25,12 +26,13 @@ body {
 .card {
   width: min(92%, 420px);
   padding: 40px 30px 45px;
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  border: 1px solid rgba(216,27,96,0.10);
+  background-clip: padding-box;
   border-radius: 28px;
   text-align: center;
   box-shadow:
-    0 30px 80px rgba(0,0,0,0.15),
-    inset 0 0 0 1px rgba(255,255,255,0.4);
+      0 30px 80px rgba(216,27,96,0.14),
+      inset 0 0 0 1px rgba(255,255,255,0.35);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -48,10 +50,19 @@ body {
   position: absolute;
   inset: -2px;
   border-radius: 30px;
-  background: linear-gradient(120deg, #ff4d6d, #ff9a9e, #fbc2eb);
+  background: radial-gradient(closest-side at 10% 20%, rgba(255,140,170,0.7), transparent 20%), linear-gradient(120deg, rgba(255,100,130,0.9), rgba(255,60,100,0.85), rgba(255,170,185,0.75));
   z-index: -1;
-  filter: blur(20px);
+  filter: blur(18px);
   opacity: 0.7;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,230,235,0.02), rgba(255,200,215,0.02));
 }
 
 .emoji {
@@ -70,7 +81,7 @@ body {
 h2 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
-  color: #4a1c2f;
+  color: #5a0b25;
   margin-bottom: 20px;
 }
 
@@ -108,14 +119,28 @@ button:active {
 
 #yes {
   left: 12%;
-  background: linear-gradient(135deg, #ff4d6d, #ff758f);
-  color: #fff;
-  box-shadow: 0 15px 35px rgba(255,77,109,0.55);
+  background: #ff2d55;
+  background-image: linear-gradient(180deg,#ff2d55 0%,#ff1f4b 100%);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 14px 40px;
+  border: 0.1px solid white;
+  box-shadow: 0 26px 60px rgba(170,26,64,0.42), 0 6px 18px rgba(0,0,0,0.12), inset 0 -4px 10px rgba(0,0,0,0.08);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.16);
+  border-radius: 42px;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
 }
 
 #yes:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(255,77,109,0.7);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 30px 72px rgba(170,26,64,0.48), 0 10px 28px rgba(0,0,0,0.14);
+}
+
+#yes:focus {
+  outline: 3px solid rgba(216,27,96,0.18);
+  outline-offset: 2px;
 }
 
 #yes.grow {
@@ -126,8 +151,9 @@ button:active {
 
 #no {
   left: 55%;
-  background: #fff;
-  color: #777;
+  background: linear-gradient(180deg, #ffeef3, #ffd6e6);
+  color: #7a2040;
+  box-shadow: 0 8px 18px rgba(122,32,64,0.08);
 }
 
 #no.shrink {
@@ -141,7 +167,7 @@ button:active {
   bottom: -20px;
   animation: floatUp linear forwards;
   pointer-events: none;
-  filter: blur(0.3px);
+  filter: blur(0.2px);
 }
 
 @keyframes floatUp {
