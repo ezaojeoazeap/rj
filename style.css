@@ -126,7 +126,6 @@ button:active {
   text-transform: uppercase;
   letter-spacing: 0.6px;
   padding: 14px 40px;
-  border: 0.1px solid white;
   box-shadow: 0 26px 60px rgba(170,26,64,0.42), 0 6px 18px rgba(0,0,0,0.12), inset 0 -4px 10px rgba(0,0,0,0.08);
   text-shadow: 0 1px 0 rgba(0,0,0,0.16);
   border-radius: 42px;
