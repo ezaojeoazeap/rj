@@ -187,3 +187,32 @@ button:active {
   #yes { left: 8%; }
   #no { left: 55%; }
 }
+
+#hotPicBtn {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  display: inline-block;
+  padding: 10px 14px;
+  background: linear-gradient(180deg,#7a0033 0%,#ff2d55 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(120,10,60,0.35), 0 2px 6px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.12);
+  transform: translateZ(0);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+#hotPicBtn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(120,10,60,0.42), 0 6px 14px rgba(0,0,0,0.18);
+}
+
+#hotPicBtn:focus {
+  outline: 3px solid rgba(255,45,85,0.18);
+  outline-offset: 3px;
+}
