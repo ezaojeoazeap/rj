@@ -5,10 +5,10 @@ const card = document.querySelector('.card');
 const buttons = document.querySelector('.buttons');
 const title = document.querySelector('.card h2');
 
-const imgInit = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnJmdTMwdzR5aXFpM3k0ajRxdXoyY2Q0b2pqbTUycXRkd2VscXZsMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kZqbBT64ECtjy/giphy.gif";
-const imgNo1 = "https://usagif.com/wp-content/uploads/gifs/sad-cat-60.gif";
-const imgNo2 = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzRuZzJhaXZ0aXE3d3IzaDN5YXFlaTJzN2QwbDYzaWZzYm16ZHhhYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SkCBOCW2hr6SAtRa8m/giphy.gif";
-const imgYes = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmNucXBldHI0Nmk2NjQ5aDkza2Fseno2anlqMTczd3VsZXF6eW9tNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MBaRIkFJiJ1yF5ZUy8/giphy.gif";
+const imgInit = "";
+const imgNo1 = "";
+const imgNo2 = "";
+const imgYes = "";
 
 let noCount = 0;
 let yesGrow = 1;
